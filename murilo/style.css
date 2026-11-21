@@ -63,7 +63,7 @@ main {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* o menu fixo não cobre o título ao clicar */
+    scroll-padding-top: 80px; 
 }
 
 .menu__lista {
@@ -72,7 +72,6 @@ html {
     list-style: none;
 }
 
-/* separador "|" entre os itens: ::before em todo <li> que vem depois de outro <li> */
 .menu__lista li + li::before {
     content: "|";
     margin-right: 20px;
@@ -233,7 +232,6 @@ html {
     list-style: none;
 }
 
-/* min(420px, 100%): 2 colunas no desktop, 1 no celular sem estourar a tela */
 .lugares__lista {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
@@ -336,7 +334,7 @@ a {
     }
 
     .menu__lista li + li::before {
-        display: none; /* quando o menu quebra de linha, o | ficaria solto */
+        display: none; 
     }
 
     .redes {
@@ -347,9 +345,8 @@ a {
         justify-content: center;
     }
 }
-/* ===== ÍCONES (Font Awesome) ===== */
 .topo__logo {
-    white-space: nowrap; /* troféu e nome sempre na mesma linha */
+    white-space: nowrap;
 }
 
 .topo__logo i {
