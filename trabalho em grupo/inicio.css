@@ -1,0 +1,221 @@
+/* ============ VARIÁVEIS ============ */
+:root {
+    --fundo: #050608;
+    --texto: #e9e4f2;
+    --texto-suave: #b4adc0;
+    --branco: #ffffff;
+    --raio: 18px;
+}
+
+/* Cor de cada integrante (rgb separado para poder usar transparência) */
+.alice   { --rgb: 244, 190, 62;  }  /* dourado */
+.leticia { --rgb: 165, 107, 255; }  /* roxo/lilás */
+.lucca   { --rgb: 52, 211, 120;  }  /* verde */
+.murilo  { --rgb: 239, 68, 68;   }  /* vermelho */
+
+/* ============ BASE ============ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Times New Roman", Georgia, serif;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============ TOPO ============ */
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.logo {
+    color: var(--branco);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* as 4 estrelinhas, uma de cada cor */
+.estrelas span:nth-child(1) { color: rgb(244, 190, 62); }
+.estrelas span:nth-child(2) { color: rgb(165, 107, 255); }
+.estrelas span:nth-child(3) { color: rgb(52, 211, 120); }
+.estrelas span:nth-child(4) { color: rgb(239, 68, 68); }
+
+.estrelas {
+    font-size: 1.1rem;
+    letter-spacing: 6px;
+}
+
+/* ============ APRESENTAÇÃO ============ */
+.hero {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 32px 30px;
+    text-align: center;
+}
+
+.hero h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: var(--texto-suave);
+    letter-spacing: 6px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 9vw, 6rem);
+    line-height: 1.1;
+    margin: 8px 0 14px;
+    color: var(--branco);
+}
+
+.hero .nomes {
+    letter-spacing: 3px;
+    font-size: 1.1rem;
+}
+
+.hero .nomes span:nth-of-type(1) { color: rgb(244, 190, 62); }
+.hero .nomes span:nth-of-type(2) { color: rgb(165, 107, 255); }
+.hero .nomes span:nth-of-type(3) { color: rgb(52, 211, 120); }
+.hero .nomes span:nth-of-type(4) { color: rgb(239, 68, 68); }
+
+.hero .nomes i {
+    color: var(--texto-suave);
+    font-style: normal;
+    margin: 0 8px;
+}
+
+/* ============ CARDS DOS INTEGRANTES ============ */
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.card {
+    background: rgba(var(--rgb), 0.07);
+    border: 1px solid rgba(var(--rgb), 0.6);
+    border-radius: var(--raio);
+    padding: 22px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(var(--rgb), 0.3);
+}
+
+.card .foto {
+    display: block;
+    margin-bottom: 18px;
+}
+
+.card .foto img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--raio);
+    border: 2px solid rgb(var(--rgb));
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card h2::before {
+    content: "✦";
+    color: rgb(var(--rgb));
+    font-size: 1rem;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.card h2 a {
+    color: rgb(var(--rgb));
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card h2 a:hover {
+    color: var(--branco);
+}
+
+.card .rotulo {
+    color: rgb(var(--rgb));
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+}
+
+.card p {
+    color: var(--texto);
+}
+
+.card strong,
+.card b {
+    color: rgb(var(--rgb));
+}
+
+.card .rotulo {
+    display: block;
+}
+
+/* ============ RODAPÉ ============ */
+.chamada {
+    max-width: 1300px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: var(--texto-suave);
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 800px) {
+    .topo {
+        padding: 12px 18px;
+    }
+
+    .hero {
+        padding: 34px 18px 20px;
+    }
+
+    .hero .nomes {
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 0 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card .foto img {
+        height: 340px;
+    }
+}
