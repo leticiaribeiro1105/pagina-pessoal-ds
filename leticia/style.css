@@ -22,7 +22,13 @@ body {
     color: var(--texto);
     font-family: "Times New Roman", Georgia, serif;
     line-height: 1.6;
+    padding-top: 80px;
     padding-bottom: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 a {
@@ -40,29 +46,57 @@ img {
 }
 
 .topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--fundo);
+    border-bottom: 3px solid var(--roxo);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 32px;
-    border-bottom: 1px solid var(--borda);
+    z-index: 1000;
+    padding: 12px 40px;
 }
 
-.logo {
-    color: var(--branco);
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.logo::before {
-    content: "✦";
-    color: var(--roxo);
-    margin-right: 10px;
-}
-
-.topo nav a {
-    font-size: 0.85rem;
+.topo__logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--texto);
     text-decoration: none;
-    margin-left: 22px;
+    white-space: nowrap;
+}
+
+.topo__logo i {
+    color: var(--roxo);
+    font-style: normal;
+    margin-right: 6px;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.menu a {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--lilas);
+}
+
+.menu__lista {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu__lista li + li::before {
+    content: "|";
+    margin-right: 20px;
+    color: var(--roxo);
 }
 
 .hero {
@@ -262,8 +296,26 @@ main {
 }
 
 @media (max-width: 800px) {
+    body {
+        padding-top: 110px;
+    }
+
+    html {
+        scroll-padding-top: 110px;
+    }
+
     .topo {
-        padding: 12px 18px;
+        padding: 12px 16px;
+    }
+
+    .menu__lista {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .menu__lista li + li::before {
+        display: none;
     }
 
     .hero {
