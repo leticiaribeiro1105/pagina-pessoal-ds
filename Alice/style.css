@@ -1,0 +1,253 @@
+*{
+    color: #b4b4b4;
+}
+.header {
+    background-color: #080A09;
+    padding: 5px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+#nome {
+    font-size: 22px;
+    margin: 5px;
+    display: inline;
+    padding-right: 1000px;
+}
+#pagina{
+    font-size: 18px;
+}
+#linha{
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: #D6A23B;
+}
+#estrela{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: none;
+    padding-top: 5px;
+}
+.links a{
+    color: #ada4a4;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+    display: inline;
+    transition: 0.3s;
+}
+.links a:hover{
+    color: #D6A23B;
+    text-decoration: underline;
+    font-size: 16px;
+    margin-left: 20px;
+    display: inline;
+
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 50px;
+    gap: 50px;
+}
+
+.apresentação {
+    width: 45%;
+}
+
+#mensageminicio {
+    font-size: 22px;
+    margin: 0;
+}
+
+#nome1 {
+    font-size: 100px;
+    color: white;
+    margin: 10px 0;
+}
+
+.frase {
+    color: #D6A23B;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.descricao {
+    font-size: 18px;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+#imagem {
+    width: 40%;
+    height: 280px;
+    object-fit: cover;
+    border: 2px solid #D6A23B;
+    border-radius: 25px;
+}
+#Sobremim{
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+    color: #ffffff;
+}
+.informações p {
+    display: block;
+    margin: 0;
+    padding-top: 10px;
+}
+.card {
+    background-color: #77602d2f;
+    padding: 5px 5px 10px 35px;
+    border-radius: 10px;
+    border: 2px solid #d6a23b6a;
+    margin-left: 30px;
+    width: 49%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+}
+.informações {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 90px;
+    align-items: center;
+    padding-right: 10px;
+    margin-top: 7px;
+}
+.infos{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding-right: 25px;
+}
+.sub{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-container {
+    display: flex;
+    gap: 0px;
+    margin-right: 20px;
+    align-items: stretch;
+}
+#imagemhobbie{
+    width: 85px;
+    height: 65px;
+    border-radius: 25px;
+}
+.ima {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hobbiesimagens {
+    display: flex;
+    gap: 40px;
+    margin-left: 15px;
+    box-sizing: cover;
+    padding-top: 7px;
+}
+#letra{
+    margin-left: 10px;
+}
+
+.cardcuriosidades {
+    background-color: #77602d2f;
+    padding: 5px 5px 10px 35px;
+    border-radius: 10px;
+    border: 2px solid #d6a23b6a;
+    margin-left: 30px;
+    width: 45%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.curiosidadesimagens {
+    display: flex;
+    gap: 15px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    border-radius: 100px;
+}
+#imagens3{
+    border: 2px solid #D6A23B;
+    border-radius: 25px;
+    object-fit: cover; 
+}
+#itemcuriosidade{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+#itemcuriosidade:last-child {
+    margin-bottom: 0;
+}
+.listacuriosidade ul{
+    padding-left: 5%;
+}
+.infoseimagens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cardlugaresquefui {
+    background-color: #77602d2f;
+    padding: 5px 5px 10px 35px;
+    border-radius: 10px;
+    border: 2px solid #d6a23b6a;
+    margin-left: 30px;
+    width: 44%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.cardlugarescuriosidade{
+    display: flex;
+    flex-direction: row;
+}
+#linklugar{
+    color: #ada4a4;
+    text-decoration: underline;
+    display: inline;
+    transition: 0.3s;
+}
+#linklugar:hover{
+    color: #D6A23B;
+    text-decoration: underline;
+    font-size: 14px;
+    display: inline;
+}
+.imagenscuriosidades{
+    margin-left: 20px;
+}
+.imagenslugares {
+    margin-left: auto;     
+    margin-right: 40px;     
+    margin-top: -15px;      
+}
+
+.cardlugaresmomentos{
+    display: flex;
+    flex-direction: row;
+}
+
+.momentos {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
