@@ -7,6 +7,8 @@
     --cor-brilho: rgba(230, 57, 70, .35);  
     --cor-texto: #f5f0f0;  
     --cor-texto-secundaria: #b3a5a7;         
+    --cor-brilho-fraco: rgba(230, 57, 70, .18);
+    --vidro-fundo: rgba(255, 255, 255, .04);
     --fonte-titulo: 'Playfair Display', serif;
     --fonte-texto: 'Open Sans', sans-serif;
 }
@@ -18,10 +20,14 @@
 }
 
 body {
-    background-color: var(--cor-fundo);
     font-family: var(--fonte-texto);
     color: var(--cor-texto);
     padding-top: 80px;
+    background:
+    radial-gradient(circle at 10% 10%, var(--cor-brilho), transparent 40%),
+    radial-gradient(circle at 90% 90%, var(--cor-brilho), transparent 40%),
+    var(--cor-fundo);
+    background-attachment: fixed;
 }
 
 main { 
@@ -35,14 +41,15 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--cor-fundo);
-    border-bottom: 3px solid var(--cor-destaque);
+    background: rgba(11, 6, 7, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--cor-destaque);
     display: flex;
     justify-content: space-between;
     z-index: 1000;
     align-items: center;
     padding: 12px 40px;
-    
 }
 
 .topo__logo {
@@ -138,12 +145,15 @@ html {
 }
 
 .cartao {
-    background-color: var(--cor-cartao);
+    background: var(--vidro-fundo);
     border: 1px solid var(--cor-cartao-borda);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
 }
 
 .cartao__titulo {
